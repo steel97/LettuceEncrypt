@@ -48,6 +48,8 @@ LettuceEncrypt.LettuceEncryptOptions.RenewDaysInAdvance.get -> System.TimeSpan?
 LettuceEncrypt.LettuceEncryptOptions.RenewDaysInAdvance.set -> void
 LettuceEncrypt.LettuceEncryptOptions.UseStagingServer.get -> bool
 LettuceEncrypt.LettuceEncryptOptions.UseStagingServer.set -> void
+LettuceEncrypt.LettuceEncryptOptions.PreferredChain.get -> string
+LettuceEncrypt.LettuceEncryptOptions.PreferredChain.set -> void
 Microsoft.AspNetCore.Hosting.LettuceEncryptKestrelHttpsOptionsExtensions
 Microsoft.Extensions.DependencyInjection.LettuceEncryptServiceCollectionExtensions
 static LettuceEncrypt.FileSystemStorageExtensions.PersistDataToDirectory(this LettuceEncrypt.ILettuceEncryptServiceBuilder! builder, System.IO.DirectoryInfo! directory, string? pfxPassword) -> LettuceEncrypt.ILettuceEncryptServiceBuilder!
