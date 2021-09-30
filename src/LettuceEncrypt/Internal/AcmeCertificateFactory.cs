@@ -291,7 +291,7 @@ namespace LettuceEncrypt.Internal
                 CommonName = commonName,
             };
             var privateKey = KeyFactory.NewKey((Certes.KeyAlgorithm)_options.Value.KeyAlgorithm);
-            var acmeCert = await _client.GetCertificateAsync(csrInfo, privateKey, order);
+            var acmeCert = await _client.GetCertificateAsync(csrInfo, privateKey, order, _options.Value.PreferredChain);
 
             _logger.LogAcmeAction("NewCertificate");
 

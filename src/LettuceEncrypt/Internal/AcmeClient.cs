@@ -116,10 +116,10 @@ namespace LettuceEncrypt.Internal
             return await httpChallenge.Validate();
         }
 
-        public async Task<CertificateChain> GetCertificateAsync(CsrInfo csrInfo, IKey privateKey, IOrderContext order)
+        public async Task<CertificateChain> GetCertificateAsync(CsrInfo csrInfo, IKey privateKey, IOrderContext order, string? preferredChain)
         {
             _logger.LogAcmeAction("GenerateCertificate", order);
-            return await order.Generate(csrInfo, privateKey);
+            return await order.Generate(csrInfo, privateKey, preferredChain);
         }
 
         private Exception MissingAccountContext() => new InvalidOperationException("Account wasn't initialized yet");

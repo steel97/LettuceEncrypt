@@ -78,5 +78,10 @@ namespace LettuceEncrypt
         /// Defaults to <see cref="ChallengeType.Any"/>.
         /// </summary>
         public ChallengeType AllowedChallengeTypes { get; set; } = ChallengeType.Any;
+
+        /// <summary>
+        /// Certes preferredChain parameter (can fix LE 30.09.2021 issue if set to "ISRG Root X1")
+        /// </summary>
+        public string? PreferredChain { get; set; }
     }
 }
